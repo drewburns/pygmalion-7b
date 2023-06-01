@@ -19,11 +19,11 @@
 #     print("done")
 
 
-from transformers import LlamaTokenizer, LlamaForCausalLM
-import torch
+from transformers import AutoTokenizer, LlamaForCausalLM
+
 
 def download_model():
-    model = LlamaForCausalLM.from_pretrained("Neko-Institute-of-Science/pygmalion-7b", torch_dtype=torch.float32)
-    tokenizer = LlamaTokenizer.from_pretrained("Neko-Institute-of-Science/pygmalion-7b")
+    model = LlamaForCausalLM.from_pretrained('Neko-Institute-of-Science/pygmalion-7b')
+    tokenizer = AutoTokenizer.from_pretrained('Neko-Institute-of-Science/pygmalion-7b')
 if __name__ == "__main__":
     download_model()
